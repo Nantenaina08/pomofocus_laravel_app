@@ -15,7 +15,7 @@
     
     <style>
         body {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #667e8a 0%, #764ba2 100%);
             min-height: 100vh;
         }
     </style>
@@ -26,7 +26,7 @@
         <header class="text-center mb-12">
             <div class="max-w-4xl mx-auto px-4">
                 <h1 class="text-5xl font-bold text-white mb-4">
-                    🍅 Pomofocus
+                     Pomofocus
                 </h1>
                 <p class="text-xl text-white/90 max-w-2xl mx-auto">
                     Boostez votre productivité avec la technique Pomodoro. 
@@ -45,7 +45,7 @@
                     
                     <!-- Instructions -->
                     <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white">
-                        <h3 class="text-lg font-semibold mb-4">🎯 Comment utiliser Pomofocus ?</h3>
+                        <h3 class="text-lg font-semibold mb-4">Comment utiliser Pomofocus ?</h3>
                         <ol class="space-y-2 text-sm">
                             <li class="flex items-start space-x-2">
                                 <span class="bg-white/20 rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold">1</span>
@@ -81,7 +81,7 @@
         <!-- Statistiques du jour -->
         <div class="max-w-4xl mx-auto px-4 mt-12">
             <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-white">
-                <h3 class="text-lg font-semibold mb-4">📊 Statistiques du jour</h3>
+                <h3 class="text-lg font-semibold mb-4"> Statistiques du jour</h3>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div class="text-center">
                         <div class="text-2xl font-bold">{{ session('completed_pomodoros', 0) }}</div>
@@ -103,15 +103,6 @@
             </div>
         </div>
 
-        <!-- Pied de page -->
-        <footer class="text-center mt-12 text-white/75">
-            <p class="text-sm">
-                Créé avec ❤️ pour améliorer votre productivité • 
-                <a href="https://francescocirillo.com/pages/pomodoro-technique" target="_blank" class="underline hover:text-white">
-                    En savoir plus sur la technique Pomodoro
-                </a>
-            </p>
-        </footer>
     </div>
 
     @livewireScripts
@@ -120,7 +111,7 @@
         // Communication entre les composants
         document.addEventListener('livewire:init', () => {
             Livewire.on('task-selected', (taskId) => {
-                // Transmettre la sélection au timer
+                
                 Livewire.dispatch('select-task', { taskId: taskId });
             });
         });
